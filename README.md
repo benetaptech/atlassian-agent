@@ -25,16 +25,40 @@
 * 提供基于java的命令行 keygen，更方便在终端环境使用。
 * 开源项目，你知道破解时都做了什么。
 
-### 直接下载
-* 直接下载本项目release包。
 
 ### 自行编译
 * Clone本项目源码，pom.xml同级目录执行`mvn package`后即可进行编译。
-* *如果你不知道我在说什么，最好还是直接下载我编译好的包。*
+* *生成2个jar,使用atlassian-agent-jar-with-dependencies.jar*
 
 ### 使用帮助
-* 如果你已经获得`atlassian-agent.jar`，可以试着执行`java -jar atlassian-agent.jar`看看输出的帮助。
-* 这里的帮助以Atlassian家的Confluence服务为例。
+* 如果你已经获得`atlassian-agent-jar-with-dependencies.jar`，可以试着执行`java -jar atlassian-agent-jar-with-dependencies.jar`看看输出的帮助。
+* 这里的帮助以Atlassian家的Confluence服务为例
+* java -jar atlassian-agent-jar-with-dependencies.jar -h 输出如下参数
+KeyGen usage: java -jar
+       /data/atlassian/agent/atlassian-agent-jar-with-dependencies.jar
+       [-d] [-h] -m <arg> [-n <arg>] -o <arg> -p <arg> -s <arg>
+ -d,--datacenter           Data center license[default: false]
+ -h,--help                 Print help message
+ -m,--mail <arg>           License email
+ -n,--name <arg>           License name[default: <license email>]
+ -o,--organisation <arg>   License organisation
+ -p,--product <arg>        License product, support:
+                           [crowd: Crowd]
+                           [questions: Questions plugin for Confluence]
+                           [crucible: Crucible]
+                           [capture: Capture plugin for JIRA]
+                           [conf: Confluence]
+                           [training: Training plugin for JIRA]
+                           [bitbucket: Bitbucket]
+                           [tc: Team Calendars plugin for Confluence]
+                           [bamboo: Bamboo]
+                           [fisheye: FishEye]
+                           [portfolio: Portfolio plugin for JIRA]
+                           [jc: JIRA Core]
+                           [jsd: JIRA Service Desk]
+                           [jira: JIRA Software(common jira)]
+ -s,--serverid <arg>       License server ID
+
 
 **新版本的 Atlassian 服务端（只测试了 Bitbucket）加入了一个证书哈希验证，需要根据 "atlassian-extras-decoder-v2" 支持库的位置进行修改代码：`io.zhile.crack.atlassian.agent.KeyTransformer#handleLicenseDecoder`**
 
