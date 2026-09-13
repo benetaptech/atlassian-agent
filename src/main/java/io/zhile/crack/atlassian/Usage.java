@@ -49,8 +49,8 @@ public class Usage {
     public static void main(String[] args) {
         String usage = "\n====================================================\n" +
                 "=======        Atlassian Crack Agent         =======\n" +
-                "=======           https://zhile.io           =======\n" +
-                "=======          QQ Group: 30347511          =======\n" +
+                "=======        https://www.atlassian.com     =======\n" +
+                "=======        QQ Group: **********          =======\n" +
                 "====================================================\n\n";
 
         System.out.print(usage);
