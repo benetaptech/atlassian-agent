@@ -17,7 +17,7 @@ abstract public class LicenseProperty {
     abstract public String getProductName();
 
     public LicenseProperty(String ContactName, String ContactEMail, String ServerID, String Organisation, boolean dataCenter) {
-        Date expiryDate = new Date(3771590399000L);
+        Date expiryDate = new Date(3771590399000L); // 3771590399000L -> 4102444799000L 2099-12-31 23:59:59
         String licenseId = "L" + System.currentTimeMillis();
 
         setActive(true);
